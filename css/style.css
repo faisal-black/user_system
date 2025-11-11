@@ -1,0 +1,291 @@
+/* 🌿 Base Reset & Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #2563eb;
+  --primary-light: #60a5fa;
+  --danger: #ef4444;
+  --success: #10b981;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --gradient: linear-gradient(135deg, #2563eb, #00c3ff);
+}
+
+/* 🌎 Body */
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🌟 Header */
+#main-header {
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.header-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+#navbar {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: none;
+  border: 2px solid transparent;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  border-color: var(--primary-light);
+  background: var(--primary-light);
+  color: #fff;
+}
+
+/* 🧭 Dashboard Layout */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+/* 🪟 Card Containers */
+.card {
+  background: var(--surface);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+  padding-left: 10px;
+  font-size: 1.25rem;
+  letter-spacing: 0.4px;
+}
+
+/* 🧍 Form */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+}
+
+form label {
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  display: block;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+  background: #f9fafb;
+}
+
+form input:focus,
+form select:focus {
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* 🖲️ Buttons */
+.btn {
+  grid-column: span 2;
+  padding: 12px 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* 🧮 Table */
+.table-wrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding-bottom: 10px;
+  /* ✅ fix: table fits fully inside the card, no cut off */
+  max-height: 78vh;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+th {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+tr:hover {
+  background: #e2e8f0;
+}
+
+/* 🎛️ Action Buttons */
+.action-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 7px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.edit-btn {
+  background: var(--success);
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background: #059669;
+}
+
+.delete-btn {
+  background: var(--danger);
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* ⚙️ Footer */
+#main-footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* 🩵 Scrollbar */
+.table-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    grid-column: 1 / -1;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  .action-cell {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    flex: 1 1 48%;
+    text-align: center;
+  }
+}

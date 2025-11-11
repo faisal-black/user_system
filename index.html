@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- 🌟 Header -->
+    <header id="main-header">
+      <div class="header-inner">
+        <h1>User Management System</h1>
+        <nav id="navbar">
+          <button class="nav-btn active" id="addUsersNav">Add User</button>
+          <button class="nav-btn" id="viewUsersNav">View Users</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 🧭 Dashboard Layout -->
+    <main class="dashboard-layout">
+      <!-- 🧍 Left: Add User Form -->
+      <section class="card" id="addUserSection">
+        <h2>Add New User</h2>
+        <form id="userForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                name="firstname"
+                id="firstName"
+                required
+                placeholder="Enter first name..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                name="lastname"
+                id="lastName"
+                required
+                placeholder="Enter last name..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                required
+                placeholder="Enter password..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="userEmail">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="userEmail"
+                required
+                placeholder="Enter email..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select name="gender" id="gender" required>
+                <option value="">-- Select Gender --</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+          </div>
+
+          <input type="hidden" name="dateCreated" id="dateCreated" />
+          <button type="submit" class="btn btn-primary">Add User</button>
+        </form>
+      </section>
+
+      <!-- 📋 Right: User Table -->
+      <section class="card" id="userListSection">
+        <h2>All Users</h2>
+        <div class="table-wrapper">
+          <table id="userTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Date Created</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- ⚙️ Footer -->
+    <footer id="main-footer">
+      <p>&copy; 2025 User Management System | Designed by fblack</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
