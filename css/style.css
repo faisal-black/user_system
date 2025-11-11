@@ -1,4 +1,4 @@
-/* 🌿 Base Reset & Theme */
+/* Base Reset & Theme */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@
   --gradient: linear-gradient(135deg, #2563eb, #00c3ff);
 }
 
-/* 🌎 Body */
+/* Body */
 body {
   font-family: "Poppins", sans-serif;
   color: var(--text);
@@ -29,7 +29,7 @@ body {
   flex-direction: column;
 }
 
-/* 🌟 Header */
+/* Header */
 #main-header {
   background: var(--surface);
   box-shadow: var(--shadow);
@@ -75,7 +75,7 @@ body {
   color: #fff;
 }
 
-/* 🧭 Dashboard Layout */
+/* Dashboard Layout */
 .dashboard-layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -86,7 +86,7 @@ body {
   flex-grow: 1;
 }
 
-/* 🪟 Card Containers */
+/* Card Containers */
 .card {
   background: var(--surface);
   padding: 30px;
@@ -112,7 +112,7 @@ body {
   letter-spacing: 0.4px;
 }
 
-/* 🧍 Form */
+/* Form */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -145,7 +145,7 @@ form select:focus {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
-/* 🖲️ Buttons */
+/* Buttons */
 .btn {
   grid-column: span 2;
   padding: 12px 16px;
@@ -166,14 +166,13 @@ form select:focus {
   transform: translateY(-2px);
 }
 
-/* 🧮 Table */
+/* Table */
 .table-wrapper {
   flex-grow: 1;
   overflow-y: auto;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding-bottom: 10px;
-  /* ✅ fix: table fits fully inside the card, no cut off */
   max-height: 78vh;
 }
 
@@ -206,7 +205,7 @@ tr:hover {
   background: #e2e8f0;
 }
 
-/* 🎛️ Action Buttons */
+/* Action Buttons */
 .action-cell {
   display: flex;
   align-items: center;
@@ -243,7 +242,7 @@ tr:hover {
   background: #dc2626;
 }
 
-/* ⚙️ Footer */
+/* Footer */
 #main-footer {
   text-align: center;
   padding: 1rem 0;
@@ -251,7 +250,7 @@ tr:hover {
   font-size: 0.9rem;
 }
 
-/* 🩵 Scrollbar */
+/* Scrollbar */
 .table-wrapper::-webkit-scrollbar {
   width: 8px;
 }
@@ -260,7 +259,7 @@ tr:hover {
   border-radius: 4px;
 }
 
-/* 📱 Responsive */
+/* Responsive */
 @media (max-width: 900px) {
   .dashboard-layout {
     grid-template-columns: 1fr;
